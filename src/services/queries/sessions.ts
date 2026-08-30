@@ -5,8 +5,6 @@ import { client } from '$services/redis';
 export const getSession = async (id: string) => {
   const session = await client.hGetAll(sessionsKey(id));
 
-  console.log(session);
-
   if (Object.keys(session).length === 0) {
     return null;
   }

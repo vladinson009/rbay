@@ -20,7 +20,5 @@ const run = async () => {
   });
 
   const results = await Promise.all(commands);
-
-  console.log(results);
 };
 run();
