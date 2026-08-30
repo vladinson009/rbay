@@ -1,14 +1,1 @@
-{
-  "id": "969dde",
-  "fileName": "my-black-and-white-instance-notebook.json",
-  "name": "playground",
-  "cells": [
-    {
-      "id": "1788036978518",
-      "type": "redis",
-      "content": "HSET company name 'Concrete Co' age 1915 industry 'material' revenue '5.3'"
-    },
-    { "id": "1788037065704", "type": "redis", "content": "HGET company age" }
-  ],
-  "createdAt": "2026-08-29T20:34:19.529Z"
-}
+{"id":"969dde","fileName":"my-black-and-white-instance-notebook.json","name":"playground","cells":[{"id":"1788036978518","type":"redis","content":"HSET company name 'Concrete Co' age 1915 industry 'material' revenue '5.3'"},{"id":"1788037065704","type":"redis","content":"HGETALL items#6857e4"}],"createdAt":"2026-08-29T20:34:19.529Z"}
