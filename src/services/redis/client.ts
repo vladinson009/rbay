@@ -1,5 +1,6 @@
 import { createClient, defineScript } from 'redis';
 import { incrementViewDef } from './scriptsDef/incrementView';
+import { unlockDef } from './scriptsDef/unlockDef';
 
 const client = createClient({
   socket: {
@@ -23,6 +24,7 @@ const client = createClient({
     //   },
     // }),
     incrementView: incrementViewDef,
+    unlock: unlockDef,
   },
 });
 
