@@ -1,4 +1,6 @@
-import { createClient, defineScript } from 'redis';
+import { createClient } from 'redis';
+import { createIndexes } from './create-indexes';
+
 import { incrementViewDef } from './scriptsDef/incrementView';
 import { unlockDef } from './scriptsDef/unlockDef';
 
@@ -30,5 +32,12 @@ const client = createClient({
 
 client.on('error', (err) => console.error(err));
 client.connect();
+client.on('connect', async () => {
+  try {
+    await createIndexes();
+  } catch (error) {
+    console.error(error);
+  }
+});
 
 export { client };
