@@ -27,8 +27,6 @@ export const itemsByUser = async (userId: string, opts: QueryOpts) => {
     },
   } as any);
 
-  console.log(total, documents);
-
   return {
     totalPages: Math.ceil(total / opts.perPage),
     items: documents.map(({ id, value }) =>
